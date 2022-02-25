@@ -2,7 +2,7 @@
 # (-include to ignore error if it does not exist)
 -include .env
 
-all: clean remove install update solc build dappbuild
+all: clean remove install update solc build dappbuild scripts
 
 # Install proper solc version.
 solc:; nix-env -f https://github.com/dapphub/dapptools/archive/master.tar.gz -iA solc-static-versions.solc_0_8_11
@@ -23,6 +23,9 @@ update:; forge update
 build  :; forge clean && forge build --optimize --optimize-runs 1000000
 dappbuild :; dapp build
 
+# chmod scripts
+scripts :; chmod +x ./scripts/*
+
 # Tests
 test   :; forge clean && forge test --optimize --optimize-runs 1000000 -v # --ffi # enable if you need the `ffi` cheat code on HEVM
 
@@ -31,3 +34,6 @@ lint :; prettier --write src/**/*.sol && prettier --write src/*.sol
 
 # Generate Gas Snapshots
 snapshot :; forge clean && forge snapshot --optimize --optimize-runs 1000000
+
+# Fork Mainnet With Hardhat
+mainnet-fork :; npx hardhat node --fork ${ETH_MAINNET_RPC_URL}

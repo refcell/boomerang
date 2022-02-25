@@ -11,7 +11,7 @@ contract Boomerang is ERC721 {
   address public immutable OWNER;
 
   /// @notice The mint price
-  uint256 public immutable MINT_PRICE;
+  uint256 public constant MINT_PRICE = 0.01 ether;
 
   /// @notice The maximum supply
   uint256 public immutable MAX_SUPPLY;
@@ -35,11 +35,9 @@ contract Boomerang is ERC721 {
   constructor(
     string memory name,
     string memory symbol,
-    uint256 mintPrice,
     uint256 maxSupply
   ) ERC721(name, symbol) {
     OWNER = msg.sender;
-    MINT_PRICE = mintPrice;
     MAX_SUPPLY = maxSupply;
   }
 

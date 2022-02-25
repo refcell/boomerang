@@ -12,7 +12,7 @@ contract BoomerangTest is DSTestPlus {
     address public constant OWNER = address(1337);
 
     /// @notice The minting price
-    uint256 public constant MINT_PRICE = 10;
+    uint256 public constant MINT_PRICE = 0.01 ether;
 
     /// @notice The maximum supply
     uint256 public constant MAX_SUPPLY = 10_000;
@@ -23,7 +23,6 @@ contract BoomerangTest is DSTestPlus {
         boom = new Boomerang(
             "Name",
             "Symbol",
-            MINT_PRICE,
             MAX_SUPPLY
         );
         vm.stopPrank();

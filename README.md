@@ -2,6 +2,29 @@
 
 An Owned, Gas Efficient ERC721 For Testing In Prod (Mainnet).
 
+## Overview
+
+A gas efficient ERC721 contract that allows the `OWNER` to recover gas costs.
+
+Deployed to Mainnet at [`0x9172c52bf412de76e080bd595f8f8c55f0ff867c`](https://etherscan.io/address/0x9172c52bf412de76e080bd595f8f8c55f0ff867c).
+
+Deployed to Rinkeby at [`0x715da5e53526bedac9bd96e8fdb7efb185d1b6ca`](https://rinkeby.etherscan.io/address/0x715da5e53526bedac9bd96e8fdb7efb185d1b6ca).
+
+Deployer: [`0xc9ab63915c6738c8ce5ca245979203bfa3f2499f`](https://etherscan.io/address/0xc9ab63915c6738c8ce5ca245979203bfa3f2499f).
+
+#### Known Errors
+
+Hardhat issue:
+```sh
+Error HH12: Trying to use a non-local installation of Hardhat, which is not supported.
+Please install Hardhat locally using npm or Yarn, and try again.
+```
+
+> Make sure hardhat is installed by running `yarn` or manually adding hardhat to dev dependencies using `yarn add --dev hardhat`.
+
+
+
+
 ## Blueprint
 
 ```ml
