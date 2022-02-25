@@ -14,8 +14,6 @@ jobs:
         with:
           version: nightly
       - name: Install Dependencies
-        run: yarn
-      - name: Update Modules
-        run: yarn sync
+        run: make
       - name: Run Tests
-        run: yarn test
+        run: make test
