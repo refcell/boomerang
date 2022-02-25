@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 pragma solidity 0.8.11;
 
-import {ERC721} from "@solmate/tokens/erc721.sol";
+import {ERC721} from "@solmate/tokens/ERC721.sol";
 
 /// @title Boomerang
 /// @notice A gas-optimized erc721 for playing in production
