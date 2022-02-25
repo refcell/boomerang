@@ -14,6 +14,6 @@ jobs:
         with:
           version: nightly
       - name: Install Dependencies
-        run: make
+        run: make update
       - name: Run Tests
         run: make test
